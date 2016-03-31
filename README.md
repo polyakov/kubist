@@ -12,14 +12,14 @@ Setup
 1. Label the minions
     * Minion 1: node=mongo-db1, arbiter=true
     * Minion 2: node=mongo-db1, arbiter=true
-````	
+    ````	
 	add example
-````
+    ````
 1. Create /data/db directories on Minion 1 an 2
 1. Create pods, replication controllers and services from 01-mongo-arbiter-demo dir
-````
-kubectl create -f ./create
-````
+    ````
+        kubectl create -f ./create
+    ````
 1. Check to make sure everything is running
 ````
 kubectl get pods
