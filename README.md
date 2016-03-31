@@ -13,7 +13,11 @@ Setup
     * Minion 1: node=mongo-db1, arbiter=true
     * Minion 2: node=mongo-db1, arbiter=true
     ````	
-	add example
+kubectl label node ip-172-20-0-20.us-west-2.compute.internal node=mongo-db1
+kubectl label node ip-172-20-0-20.us-west-2.compute.internal arbiter=true
+kubectl label node ip-172-20-0-21.us-west-2.compute.internal node=mongo-db2
+kubectl label node ip-172-20-0-21.us-west-2.compute.internal arbiter=true
+    
     ````
 1. Create /data/db directories on Minion 1 an 2
 1. Create pods, replication controllers and services from 01-mongo-arbiter-demo dir
@@ -99,5 +103,5 @@ for SERVICES in docker kubelet; do
 done
 ````
 
-To check replica set, connect to the health node with mongo and run rs.status()
+To check replica set, connect to the health node with mongo and run ````rs.status()````
 
