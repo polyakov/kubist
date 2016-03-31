@@ -78,6 +78,8 @@ Experiments
 *** Note: detections can take quite a long time.  It's possible to speed that up by hitting the services, for example with curl.
  
 To remove thie node stop kubelet and docker services:
+
+
     ````
 for SERVICES in  kubelet docker; do
    sudo systemctl stop $SERVICES
@@ -85,7 +87,10 @@ for SERVICES in  kubelet docker; do
    sudo systemctl status $SERVICES
 done
     ````
+
 To restore the node, restart kubelet and docker services:
+
+
     ````
 for SERVICES in docker kubelet; do
    sudo systemctl start $SERVICES
@@ -93,6 +98,7 @@ for SERVICES in docker kubelet; do
    sudo systemctl status $SERVICES
 done
     ````
+
 To check replica set, connect to the health node with mongo and run rs.status()
 
 
