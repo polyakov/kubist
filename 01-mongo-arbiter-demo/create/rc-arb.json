@@ -1,0 +1,44 @@
+{
+    "kind": "ReplicationController",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "arbiter-rc"
+    },
+    "spec": {
+                "replicas":1,
+        "selector": {
+            "app": "arbiter"
+        },
+                "template":{
+                         "metadata":{
+                                "labels":{
+                                   "app":"arbiter"
+                                }
+                         },
+         "spec":{
+            "containers":[
+               {
+                  "name":"dbarb",
+                  "image":"docker.io/mongo:3.2",
+                  "imagePullPolicy": "Never",
+                  "command": ["/entrypoint.sh"],
+                  "args": [
+                                "mongod",
+                                "--smallfiles",
+                                "--replSet=demoRS"
+                        ],
+                   "ports": [
+                                {
+                                  "hostPort": 27018,
+                                  "containerPort": 27017
+                                }
+                        ]
+               }
+            ],
+        "nodeSelector": {
+          "arbiter": "true"
+        }
+         }
+                }
+        }
+}

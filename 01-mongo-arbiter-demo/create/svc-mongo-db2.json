@@ -1,0 +1,20 @@
+{
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "mongo2-svc"
+    },
+    "spec": {
+        "selector": {
+            "name": "mongo-db2"
+        },
+        "ports": [
+            {
+                "name": "mongo-port",
+                "protocol": "TCP",
+                "port": 27017,
+                "targetPort": 27017
+            }
+        ]
+    }
+}

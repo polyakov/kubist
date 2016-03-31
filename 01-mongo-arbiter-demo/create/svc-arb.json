@@ -1,0 +1,20 @@
+{
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "arbiter-svc"
+    },
+    "spec": {
+        "selector": {
+            "app": "arbiter"
+        },
+        "ports": [
+            {
+                "name": "mongo-port",
+                "protocol": "TCP",
+                "port": 27017,
+                "targetPort": 27017
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+kubectl delete service "mongo1-svc"
+kubectl delete service "mongo2-svc"
+kubectl delete service "arbiter-svc"
+kubectl delete rc "arbiter-rc"
+kubectl delete po "mongo-db1"
+kubectl delete po "mongo-db2"
