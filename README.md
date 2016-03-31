@@ -10,9 +10,8 @@ Setup
 
 1. Spin up kubernetes cluster (http://kubernetes.io/docs/getting-started-guides/aws/)
 1. Label the minions
-	
-	a. Minion 1: node=mongo-db1, arbiter=true
-	a. Minion 2: node=mongo-db1, arbiter=true
+* Minion 1: node=mongo-db1, arbiter=true
+* Minion 2: node=mongo-db1, arbiter=true
 ````	
 	add example
 ````
@@ -28,9 +27,9 @@ kubectl get rc
 kubectl get svc
 ````
 1. Configure mongo replication set
-	a. ssh  to  Minion 1
-	a. open mongo on the MongoDB container
-	a. initiate the replica set
+* ssh  to  Minion 1
+* open mongo on the MongoDB container
+* initiate the replica set
 ````
 rs.initiate(
 {
@@ -53,15 +52,15 @@ rs.initiate(
                 }
         ]})
 ````
-	a. add the second server
+* add the second server
 ````
 rs.add("mongo2-svc.default.svc.cluster.local:27017")		
 ````
-	a. add the arbiter
+* add the arbiter
 ````
 rs.addArb("arbiter-svc.default.svc.cluster.local:27017")
 ````
-	a. check status (you should see there healthy entries (primary, secondary and arbiter)
+* check status (you should see there healthy entries (primary, secondary and arbiter)
 ````
 rs.status()
 ````
@@ -72,10 +71,10 @@ rs.status()
 Experiments
 ====
 1.  We are going to simulate a node going down.  We are going to chose the node running both mongo and the arbiter.  We expect the following:
-	a. Kubernetes detects that one of the mongo pods is gone and that the arbiter is pod is down as well
-	a. MongoDB changes remaining healthy node to secondary since it lost the majority
-	a. Kubernetes replications controller spins up a new arbiter pod on the healthy node
-	a. MongoDB detect the arbiter and the healthy node is elected primary.  
+* Kubernetes detects that one of the mongo pods is gone and that the arbiter is pod is down as well
+* MongoDB changes remaining healthy node to secondary since it lost the majority
+* Kubernetes replications controller spins up a new arbiter pod on the healthy node
+* MongoDB detect the arbiter and the healthy node is elected primary.  
 *** Note: detections can take quite a long time.  It's possible to speed that up by hitting the services, for example with curl.
  
 To remove thie node stop kubelet and docker services:
