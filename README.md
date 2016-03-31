@@ -10,8 +10,8 @@ Setup
 
 1. Spin up kubernetes cluster (http://kubernetes.io/docs/getting-started-guides/aws/)
 1. Label the minions
-* Minion 1: node=mongo-db1, arbiter=true
-* Minion 2: node=mongo-db1, arbiter=true
+    * Minion 1: node=mongo-db1, arbiter=true
+    * Minion 2: node=mongo-db1, arbiter=true
 ````	
 	add example
 ````
