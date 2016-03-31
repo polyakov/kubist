@@ -12,11 +12,12 @@ Setup
 1. Label the minions
     * Minion 1: node=mongo-db1, arbiter=true
     * Minion 2: node=mongo-db1, arbiter=true
+      For example:
     ````	
-kubectl label node ip-172-20-0-20.us-west-2.compute.internal node=mongo-db1
-kubectl label node ip-172-20-0-20.us-west-2.compute.internal arbiter=true
-kubectl label node ip-172-20-0-21.us-west-2.compute.internal node=mongo-db2
-kubectl label node ip-172-20-0-21.us-west-2.compute.internal arbiter=true
+kubectl label node <node1> node=mongo-db1
+kubectl label node <node1> arbiter=true
+kubectl label node <node2> node=mongo-db2
+kubectl label node <node2> arbiter=true
     
     ````
 1. Create /data/db directories on Minion 1 an 2
