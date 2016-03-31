@@ -80,25 +80,24 @@ Experiments
 To remove thie node stop kubelet and docker services:
 
 
-    ````
+````
 for SERVICES in  kubelet docker; do
    sudo systemctl stop $SERVICES
    sudo systemctl disable $SERVICES
    sudo systemctl status $SERVICES
 done
-    ````
+````
 
 To restore the node, restart kubelet and docker services:
 
 
-    ````
+````
 for SERVICES in docker kubelet; do
    sudo systemctl start $SERVICES
    sudo systemctl enable $SERVICES
    sudo systemctl status $SERVICES
 done
-    ````
+````
 
 To check replica set, connect to the health node with mongo and run rs.status()
-
 
