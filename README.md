@@ -12,6 +12,7 @@ sudo yum install -y python
 sudo pip install awscli
 sudo yum install -y git
 sudo yum install -y openssl
+sudo yum install -y wget
 aws configure
 ````
 
