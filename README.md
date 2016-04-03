@@ -26,11 +26,12 @@ Setup
     * Minion 2: node=mongo-db1, arbiter=true
       For example:
     ````	
-kubectl label node <node1> node=mongo-db1
-kubectl label node <node1> arbiter=true
-kubectl label node <node2> node=mongo-db2
-kubectl label node <node2> arbiter=true
-    
+export MONGODB1=<node1>
+export MONGODB2=<node2>
+kubectl label node $MONGODB1 name=mongo-db1 arbiter=true
+kubectl label node $MONGODB2 name=mongo-db2 arbiter=true
+
+kubectl get nodes -L name -L arbiter
     ````
 1. Create /data/db directories on Minion 1 an 2
 1. Create pods, replication controllers and services from 01-mongo-arbiter-demo dir
