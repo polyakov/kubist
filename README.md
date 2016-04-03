@@ -5,6 +5,16 @@
 
 This runs AWS, but nothing is specific to it.  Should run anywhere.
 
+Prereq
+===
+````
+sudo yum install -y python
+sudo pip install awscli
+sudo yum install -y git
+sudo yum intalll -y openssl
+````
+
+
 Setup
 ===
 
