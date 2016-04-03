@@ -11,7 +11,8 @@ Prereq
 sudo yum install -y python
 sudo pip install awscli
 sudo yum install -y git
-sudo yum intalll -y openssl
+sudo yum install -y openssl
+aws configure
 ````
 
 
