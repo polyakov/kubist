@@ -1,0 +1,42 @@
+{
+    "kind": "ReplicationController",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "app-rc"
+    },
+    "spec": {
+        "replicas":3,
+        "selector": {
+            "app": "app-api"
+        },
+        "template":{
+             "metadata":{
+                  "labels":{
+                      "app":"app-api"
+                  }
+             },
+             "spec":{
+                 "containers":[
+                  {
+                      "name":"app-api",
+                      "image":"835748654316.dkr.ecr.us-west-2.amazonaws.com/mongodb2016:dev1",
+                      "resources": {
+	                  "requests":{
+		              "cpu": "10m"
+		          }
+		       },
+		       	 "ports": [
+                                {
+                                  "containerPort": 8080
+                                }
+                        ]
+
+                  }
+                  ],
+                  "nodeSelector": {
+                      "app": "true"
+                  }
+              }
+         }
+    }
+}

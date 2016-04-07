@@ -20,14 +20,18 @@
                {
                   "name":"dbarb",
                   "image":"docker.io/mongo:3.2",
-                  "imagePullPolicy": "Never",
-                  "command": ["/entrypoint.sh"],
+                  "resources": {
+			"requests":{
+			   "cpu": "10m"
+			}
+		  },
+		  "command": ["/entrypoint.sh"],
                   "args": [
                                 "mongod",
                                 "--smallfiles",
                                 "--replSet=demoRS"
                         ],
-                   "ports": [
+                  "ports": [
                                 {
                                   "hostPort": 27018,
                                   "containerPort": 27017
