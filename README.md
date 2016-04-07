@@ -82,7 +82,11 @@ rs.addArb("arbiter-svc.default.svc.cluster.local:27017")
     ````
 rs.status()
     ````
-
+1. Update kubernetes rules to allow port 80 access
+1. Reload nginx config
+````
+kubectl exec -t <pod_name> -c app-www -- service nginx reload
+````
 
 
 
