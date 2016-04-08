@@ -34,7 +34,10 @@ kubectl label node $MONGODB2 node=mongo-db2 arbiter=true
 kubectl get nodes -L name -L arbiter
     ````
 1. Create /data/db directories on Minion 1 an 2
+1. Label all non data nodes with www=true and api=true
+1. Update attach an elasticIP to one of the minion and svc-www.json with correct ip
 1. Create pods, replication controllers and services from 01-mongo-arbiter-demo dir
+
     ````
         kubectl create -f ./create
     ````
@@ -82,7 +85,11 @@ rs.addArb("arbiter-svc.default.svc.cluster.local:27017")
     ````
 rs.status()
     ````
-
+1. Update kubernetes rules to allow port 80 access
+1. Reload nginx config
+````
+kubectl exec -t <pod_name> -c app-www -- service nginx reload
+````
 
 
 
