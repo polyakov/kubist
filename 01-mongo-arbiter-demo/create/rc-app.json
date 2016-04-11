@@ -20,11 +20,18 @@
                   {
                       "name":"app-api",
                       "image":"835748654316.dkr.ecr.us-west-2.amazonaws.com/mongodb2016:dev1",
+                      "imagePullPolicy": "Always",
                       "resources": {
 	                  "requests":{
 		              "cpu": "10m"
 		          }
 		       },
+                       "env":[
+                           { 
+                              "name":  "MONGO_CONNECTION_STR",
+                              "value": "mongodb://mongo1-svc.default.svc.cluster.local:27017,mongo2-svc.default.svc.cluster.local:27017"
+                           }
+                        ],
 		       	 "ports": [
                                 {
                                   "containerPort": 8080
