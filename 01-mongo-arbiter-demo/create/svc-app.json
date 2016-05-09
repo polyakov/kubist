@@ -15,10 +15,6 @@
                 "port": 80,
                 "targetPort": 8080
             }
-        ],
-        "externalIPs" : [
-            "52.38.71.69"
         ]
-	
     }
 }

@@ -29,7 +29,7 @@
                        "env":[
                            { 
                               "name":  "MONGO_CONNECTION_STR",
-                              "value": "mongodb://mongo1-svc.default.svc.cluster.local:27017,mongo2-svc.default.svc.cluster.local:27017"
+                              "value": "mongodb://mongo1-svc.default.svc.cluster.local:27017,mongo2-svc.default.svc.cluster.local:27017/demo"
                            }
                         ],
 		       	 "ports": [
