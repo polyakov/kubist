@@ -19,7 +19,7 @@
                  "containers":[
                   {
                       "name":"app-api",
-                      "image":"835748654316.dkr.ecr.us-west-2.amazonaws.com/mongodb2016:dev1",
+                      "image":"950935651420.dkr.ecr.us-east-1.amazonaws.com/preparedminddemo:latest",
                       "imagePullPolicy": "Always",
                       "resources": {
 	                  "requests":{
@@ -29,7 +29,7 @@
                        "env":[
                            { 
                               "name":  "MONGO_CONNECTION_STR",
-                              "value": "mongodb://mongo1-svc.default.svc.cluster.local:27017,mongo2-svc.default.svc.cluster.local:27017/demo"
+                              "value": "mongodb://mongo1-svc.default.svc.cluster.local:27017,mongo2-svc.default.svc.cluster.local:27017/demo?replicaSet=demoRS"
                            }
                         ],
 		       	 "ports": [
