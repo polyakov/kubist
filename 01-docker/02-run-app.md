@@ -1,3 +1,4 @@
+# Run the app to test it
 Overview
 --------
 
@@ -7,28 +8,28 @@ Our application uses MongoDB. For this test we'll use mLabs sandbox.
 
 Prerequisites
 -------------
-- MongoDB connection string
+1. You shoud have a MongoDB connection string.  For purposes of the demo we are using mLab sandbox. Any MongoDB instance will do.
 
 Run the app
 -----------
 
-- ssh to the VM
-```
-vagrant ssh
-```
+1. ssh to the VM
+    ```
+    vagrant ssh
+    ```
 
-- Run the app using node.  This will start the app on port 3000
-```
-export MONGO_CONNECTION_STR=<connectionstring>
-cd ~/demoapp/app/server
-node ./index.js &
-```
+1. Run the app using node.  This will start the app on port 3000
+    ```
+    export MONGO_CONNECTION_STR=<connectionstring>
+    cd ~/demoapp/app/server
+    node ./index.js &
+    ```
 
-- Test the app in the VM using curl.  You should see valid HTML.
-```
-curl localhost: 3000
-```
-- Test the app using forwarded port from host browser at http://localhost:3000
+1. Test the app in the VM using curl.  You should see valid HTML.
+    ```
+    curl localhost: 3000
+    ```
 
+1. Test the app using forwarded port from host browser at [http://localhost:3000](http://localhost:3000)
 
 Next step: [Build a Docker image](03-build-image.md)

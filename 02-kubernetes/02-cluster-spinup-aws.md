@@ -29,3 +29,21 @@ Steps:
    ```
    
 Next step: [Configure the cluster](03-cluster-config.md)
+
+
+FAQ:
+---
+
+1. error reading SSH key file
+
+    ```
+    [ec2-user@ip-172-30-4-251 ~]$ kops create cluster --zones us-east-1a ${NAME}
+       I0604 02:14:05.348207    8257 create_cluster.go:661] Inferred --cloud=aws from zone "us-east-1a"
+       
+       error reading SSH key file "/home/ec2-user/.ssh/id_rsa.pub": open /home/ec2-user/.ssh/id_rsa.pub: no such file or directory
+    ```
+    
+    **Solution:**
+    ```
+    ssh-keygen -t rsa
+    ```

@@ -25,8 +25,8 @@ Steps
 
 1. We'll be using two environment variables Set environment variable NAME and KOPS_STATE_STORE.
     ```
-    export NAME=mongodb2018.preparedmind.net
-    export KOPS_STATE_STORE=s3://mongodb2018-2
+    export NAME=mongodb2017.preparedmind.net
+    export KOPS_STATE_STORE=s3://mongodb-2017
     ```
     or
     ````

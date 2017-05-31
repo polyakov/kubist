@@ -41,4 +41,4 @@ Steps:
         ```
     
     
-Next step: [Deploy MongoDB](05-deploy-mongodb.md)
+Next step: [Deploy MongoDB](06-deploy-mongodb.md)

@@ -13,7 +13,8 @@ Steps:
     ```
 1. Create namespace
     ```
-    kubectl create namespace ${NAMESPACE}    ```
+    kubectl create namespace ${NAMESPACE}    
+    ```
 1. Set your namespace default
     ```
     kubectl config set-context $(kubectl  config  current-context) --namespace=${NAMESPACE}

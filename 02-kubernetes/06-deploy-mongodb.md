@@ -90,4 +90,4 @@ In this step, we are starting to create components.  We'll do this step by step.
         rs.status()
         ```
 
-Next step: [Deploy App](06-deploy-app.md)
+Next step: [Deploy App](07-deploy-app.md)

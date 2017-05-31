@@ -1,19 +1,27 @@
-Docker demo
+# Docker demo
 
 Overview
+----
 
-To run this demo, you two choices: AWS or locally using VirtualBox and Vagrant.
+To run this demo, we wil use VirtualBox and Vagrant.
 
-Whether you choose AWS or VirtualBox, you also have another choice.  You can build everything "from scratch" starting with a plain base machine or you can use a pre-built image.
-
-Vagrant
-This is [an example](http://example.com/ "Title") inline link.
+While links below include all the steps to build the environment from scratch, we have also built an image you can use out of the box.
 
 
+Prep:
+----
+In the "Prep" phase we setup a base machine with everything you need as well as instructions for using the prebuilt box.
+1. [Build machine setup](01-setup.md)
+
+Steps:
+----
+1. [Test the app](02-run-app.md)
+
+1. [Build Docker image](03-build-image.md)
+1. [Run container](04-run-image.md)
+1. [Publish image](05-publish-image.md)
+
+Next step: [Build machine setup](01-setup.md)
 
 
-1. Setup the build machine.  We will use the build machine to create our docker build.
-./Vagrant-build/setup.md
 
-2. Run the up to make sure everything works
-./Vagrant-build/run-app.md
