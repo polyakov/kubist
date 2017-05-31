@@ -19,7 +19,7 @@
                  "containers":[
                   {
                       "name": "git-sync",
-                      "image": "gcr.io/google_containers/git-sync",
+                      "image": "openweb/git-sync",
                       "resources": {
                           "requests":{
                               "cpu": "10m"
