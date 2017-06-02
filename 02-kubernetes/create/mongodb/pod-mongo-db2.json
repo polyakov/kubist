@@ -1,0 +1,46 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "mongo-db2",
+    "labels": {
+      "layer": "db",
+	  "name": "mongo-db2"
+    }
+  },
+  "spec": {
+     "containers": [
+       {
+         "name": "mongo",
+         "image": "docker.io/mongo",
+         "command": ["/entrypoint.sh"],
+         "resources": {
+           "requests":{
+             "cpu": "10m"
+           }
+         },
+         "args": [
+           "mongod",
+           "--smallfiles",
+           "--replSet=demoRS"
+         ],
+         "volumeMounts": [
+           {
+             "name": "db-data",
+             "mountPath": "/data/db"
+           }
+         ]
+       }
+     ],
+    "nodeSelector": {
+      "node": "mongo-db2"
+    },
+    "volumes": [
+      {
+        "name": "db-data",
+        "emptyDir":{}
+      }
+    ],
+    "restartPolicy": "Never"
+  }
+}

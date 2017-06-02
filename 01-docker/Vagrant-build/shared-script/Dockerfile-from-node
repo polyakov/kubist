@@ -1,0 +1,27 @@
+FROM node:6
+# Start with official node build https://hub.docker.com/_/node/
+
+# Show nodejs and npm versions installed. Echo these out during build
+RUN node -v
+RUN npm -v
+
+# Set port for nodejs to listen on and expose it
+ENV PORT 8080
+EXPOSE 8080
+
+# Set production environment for nodejs application
+ENV NODE_ENV=production
+
+# Make directory for our nodejs project
+RUN mkdir /app_root
+RUN mkdir /app_root/app
+RUN mkdir /app_root/node_modules
+
+# Add node_modules from build
+ADD ./demoapp/node_modules /app_root/node_modules
+
+# Add application code
+ADD ./demoapp/app /app_root/app
+
+# Run it!
+CMD ["node", "/app_root/app/server/index.js"]
