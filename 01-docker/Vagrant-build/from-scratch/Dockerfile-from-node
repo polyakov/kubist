@@ -1,7 +1,7 @@
 FROM node:6
 # Start with official node build https://hub.docker.com/_/node/
 
-# Show nodejs and npm versions installed
+# Show nodejs and npm versions installed. Echo these out during build
 RUN node -v
 RUN npm -v
 
