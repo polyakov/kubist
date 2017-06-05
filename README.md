@@ -10,7 +10,7 @@ By "thin line", I mean a process that is realistic, addresses many of the challe
 Steps:
 ---
 
-1. [Dockerize you app](01-docker/README.md)
+1. [Dockerize your app](01-docker/README.md)
     
     Steps for taking a working application and publishing it to a Docker repository.
      
