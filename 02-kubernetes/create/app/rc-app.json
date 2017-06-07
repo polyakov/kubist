@@ -19,7 +19,7 @@
                    "containers":[
                     {
                         "name":"app-api",
-                        "image":"950935651420.dkr.ecr.us-east-1.amazonaws.com/preparedminddemo:latest",
+                        "image":"docker.io/polyakov/mongodb-demoapp-2017",
                         "resources": { "requests":{ "cpu": "10m" } },
                          "env":[
                              {
