@@ -20,7 +20,7 @@ Steps:
     
 1. This is the steps where we actually create the cluster by adding **--yes**
     ```
-    kops create cluster --zones us-east-1a ${NAME} --yes
+    kops update cluster ${NAME} --yes
     ```
 
 1. Creating resources can take a few minutes.  You can see the nodes come up using kubectl or in AWS console.

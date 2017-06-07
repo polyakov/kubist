@@ -49,3 +49,4 @@ Steps:
     kubectl describe nodes
     ```
 1. Craft a URL from IP and port acquired in the prior two steps and check that the site is up.
+

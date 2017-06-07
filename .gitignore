@@ -1,3 +1,5 @@
 .idea
 old
 **/*.box
+demo.txt
+~*.docx

@@ -29,3 +29,4 @@ Steps:
     ```
     
     
+Next Step: [Set your namesapce](05-set-namespace.md)

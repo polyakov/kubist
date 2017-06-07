@@ -1,0 +1,25 @@
+rs.initiate(
+{
+        "_id" : "demoRS",
+        "version" : 1,
+        "protocolVersion" : NumberLong(1),
+        "members" : [
+                {
+                        "_id" : 0,
+                        "host" : "mongo1-svc.<namespace>.svc.cluster.local:27017",
+                        "arbiterOnly" : false,
+                        "buildIndexes" : true,
+                        "hidden" : false,
+                        "priority" : 1,
+                        "tags" : {
+
+                        },
+                        "slaveDelay" : NumberLong(0),
+                        "votes" : 1
+                }
+        ]})
+
+
+rs.add("mongo2-svc.<namespace>.svc.cluster.local:27017")
+
+rs.addArb("arbiter-svc.<namespace>.svc.cluster.local:27017")
