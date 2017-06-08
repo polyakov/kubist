@@ -1,1 +1,2 @@
-docker pull node
+docker pull node:6
+
