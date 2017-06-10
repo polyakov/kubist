@@ -12,7 +12,9 @@ Prep:
 ----
 In the "Prep" phase we setup a base machine with everything you need as well as instructions for using the prebuilt box.
 1. [Build machine setup](01-setup.md)
-
+    1. [Setup from prebuilt image](01b-setup-prebuilt-image.md)
+    1. [Build Docker machine from scratch](01a-setup-build-from-scratch.md)
+    
 Steps:
 ----
 1. [Test the app](02-run-app.md)
