@@ -13,7 +13,7 @@ Prep
 ----
 If the cluster is running start with #4.  
 1. [Setup your client](01-client-setup.md)
-1. [Spin up your cluster (AWS)](02-cluster-spinup.md)
+1. [Spin up your cluster (AWS)](02-cluster-spinup-aws.md)
 1. [Configure the cluster](03-cluster-config.md)
 
 
