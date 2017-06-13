@@ -31,6 +31,20 @@ Steps:
 Next step: [Configure the cluster](03-cluster-config.md)
 
 
+Publish config to aws
+-------
+
+1. Copy the file to locahost (that's where I have AWS tools installed):
+    ```
+    scp -P 2222 -i C:/Users/polya/.vagrant.d/insecure_private_key vagrant@127.0.0.1:/home/vagrant/.kube/config .
+    ```
+    
+1. Upload to S3
+    ```
+    aws s3 cp .\config s3://mongodb-2017/config --profile=pm
+    ```
+    
+
 FAQ:
 ---
 
