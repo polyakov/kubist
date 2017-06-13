@@ -6,9 +6,14 @@ Below are instructions to download the image from AWS S3 and load it into Virtua
 From prebuilt box image:
 ------------------------
 1. Download the image from AWS using:    
-    ```
-    curl https://s3.amazonaws.com/2017mongodb/Vagrant/build-mongodb-2017.box
-    ```
+    1. Linux
+        ```
+        curl https://s3.amazonaws.com/2017mongodb/Vagrant/build-mongodb-2017.box
+        ```
+    1. Windows
+        ```
+         curl -OutFile build-mongodb-2017.box https://s3.amazonaws.com/2017mongodb/Vagrant/build-mongodb-2017.box
+         ```
 
 1. Import into virtual box:
     ```
