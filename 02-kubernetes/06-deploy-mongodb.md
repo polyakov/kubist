@@ -16,38 +16,8 @@ In this step, we are starting to create components.  We'll do this step by step.
     ```
     kubectl create -f ./create/mongodb
     ```
-    Skip to step #2 below.
+    Note: You can [create Pods, RC and Services one at a time](06-deploy-mongodb-step-by-step.md).  
     
-**Or,**    
-    
- 1. Create components one at a time
-    1. Create MongoDB pods
-        ```
-        kubectl create -f ./create/mongodb/pod-mongo-db1.json
-        kubectl create -f ./create/mongodb/pod-mongo-db1.json
-        ```
-        check pods
-        ```
-        kubectl get pods
-        ```
-     1. Create arbiter 
-        ```
-        kubectl create -f ./create/mongodb/rc-arb.json
-        ```
-        check replication controllers
-        ```
-        kubectl get rc
-        ```
-     1. Create services
-        ```
-        kubectl create -f ./create/mongodb/svc-arb.json
-        kubectl create -f ./create/mongodb/svc-mongo-db1.json
-        kubectl create -f ./create/mongodb/svc-mongo-db2.json
-        ```
-        check services
-        ```
-        kubectl get svc
-        ```
  1. Once pods are running we can configure the MongoDB replica set.
     1. connect to first pod
         ```
