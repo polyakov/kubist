@@ -13,7 +13,7 @@ We will execute these steps in a virtual machine running on <a href="https://www
 
 1. [Setup from prebuilt image](01b-setup-prebuilt-image.md)
 1. [Build Docker machine from scratch](01a-setup-build-from-scratch.md)
-
+1. [Run on AWS](01c-setup-aws-image.md)
 
 
 Next step: [Run application](02-run-app.md)

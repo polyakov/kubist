@@ -41,9 +41,10 @@ Publish config to aws
     
 1. Upload to S3
     ```
-    aws s3 cp .\config s3://mongodb-2017/config --profile=pm
+    aws s3 cp .\config s3://mongodb-2017/config --acl public-read --profile=pm
     ```
     
+    Substitute your bucket for ``mongodb-2017``
 
 FAQ:
 ---

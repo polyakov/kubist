@@ -1,0 +1,37 @@
+Thank you for taking my tutorial.  
+
+This USB contains the following files:
+
+build-mongodb-2017.box  - Vagrant box file for import to Virtual Box
+README			        - this file
+
+
+Import Vagrant box:
+----------------------
+1. Change directory to the location of the box file.
+2. Import box file into VirtualBox with the following command
+
+	vagrant box add ./build-mongodb-2017.box --name polyakov/docker-k8s-build --force
+
+Run on AWS
+----------
+1. Launch AMI ami-bd2c73ab
+2. Login with user "fedora"
+
+
+How to run the demos:
+---------------------
+1. Follow readme at https://github.com/polyakov/kubist
+
+2. For the docker demo you will need a connection string:
+
+    export MONGO_CONNECTION_STR=mongodb://VadimMongoDB2017:Password4321@ds155961.mlab.com:55961/mongodb_2017
+
+    export MONGO_CONNECTION_STR="mongodb://admin:docker@docker-k8s-shard-00-00-rcoig.mongodb.net:27017,docker-k8s-shard-00-01-rcoig.mongodb.net:27017,docker-k8s-shard-00-02-rcoig.mongodb.net:27017/mongodb_2017?ssl=true&replicaSet=docker-k8s-shard-0&authSource=admin"
+
+
+How to get a hold of me:
+------------------------
+1. Post an issue on github: https://github.com/polyakov/kubist
+2  Find me on linkedin: https://www.linkedin.com/in/vadimpolyakov/
+3. Email me: vadim@preparedmind.net

@@ -27,9 +27,9 @@ Run the app
 
 1. Test the app in the VM using curl.  You should see valid HTML.
     ```
-    curl localhost: 3000
+    curl localhost:3000
     ```
 
-1. Test the app using forwarded port from host browser at [http://localhost:3000](http://localhost:3000)
+1. Test the app using forwarded port from host browser at [http://localhost:3000/#/tech](http://localhost:3000/#/tech)
 
 Next step: [Build a Docker image](03-build-image.md)

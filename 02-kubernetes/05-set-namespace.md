@@ -9,7 +9,7 @@ Steps:
 
 1. Set namespace as a env variable.  **Change the namespace to your own name**
     ```
-    export NAMESPACE=polyakov3519
+    export NAMESPACE=<use your namespece>
     ```
 1. Create namespace
     ```

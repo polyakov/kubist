@@ -10,10 +10,25 @@ Steps:
 ----
 1. **Update ``./app/rc-app.json`` with your namespace.**
 
-1. Deploy app in one command by invoking ``kubectl create`` with a directory argument.
-
+1. Deploy Replication Controller
     ```
-    kubectl create -f ./app
+    kubectl create -f ./app/rc-app.json
+    ```
+ 
+1. List services
+    ```
+    kubectl get rc
+    kubectl get pods
+    ```
+    
+1. Deploy service
+    ```
+    kubectl create -f ./app/svc-app.json
+    ```
+    
+1. List services
+    ```
+    kubectl get svc
     ```
 
 1. Get service details, in partucular note the port of the service

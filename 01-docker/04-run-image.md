@@ -36,6 +36,11 @@ Run the application with Docker
     ```
     docker inspect 2017mongo_db
     ```
+    
+    Connect to the container to make sure mongo is running:
+    ```
+    docker exec -ti 2017mongo_db mongo
+    ```
 
 1. now that our database is running, let's connect the application:
     ```
@@ -66,7 +71,7 @@ Run the application with Docker
         curl localhost:8080
         ```
 
-    1. hit application from host machine; we are forwarding port from VM to the host by access [http://localhost:8080](http://localhost:8080) from your browser.
+    1. hit application from host machine; we are forwarding port from VM to the host by access [http://localhost:8080/#/tech](http://localhost:8080/#/tech) from your browser.
     
 
 Next step: [Publish image](05-publish-image.md)

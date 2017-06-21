@@ -43,4 +43,4 @@ Steps
     - create a bucket for kops state
     - create and permission kops user in AWS IAM
 
-Next step: [Spin up your cluster (AWS)](01-cluster-spinup.md)
+Next step: [Spin up your cluster (AWS)](02-cluster-spinup-aws.md)

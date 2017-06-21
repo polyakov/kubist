@@ -12,9 +12,13 @@ In this step, we are starting to create components.  We'll do this step by step.
  
  Steps:
  ---
+ 1. Change directory:
+    ```
+    cd ~/kubist/02-kubernetes/create/
+    ```
  1. Create all MongoDB components in one command
     ```
-    kubectl create -f ./create/mongodb
+    kubectl create -f ./mongodb
     ```
     Note: You can [create Pods, RC and Services one at a time](06-deploy-mongodb-step-by-step.md).  
     

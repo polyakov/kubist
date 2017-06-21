@@ -5,10 +5,13 @@ Below are instructions to download the image from AWS S3 and load it into Virtua
 
 From prebuilt box image:
 ------------------------
-1. Download the image from AWS using:    
+
+**Steps video: [https://www.screencast.com/t/hU5S3nny](https://www.screencast.com/t/hU5S3nny)**
+
+1. Download the image from AWS using (**Don't do this at MongoDB 2017**):    
     1. Linux
         ```
-        curl https://s3.amazonaws.com/2017mongodb/Vagrant/build-mongodb-2017.box
+        wget https://s3.amazonaws.com/2017mongodb/Vagrant/build-mongodb-2017.box
         ```
     1. Windows
         ```
