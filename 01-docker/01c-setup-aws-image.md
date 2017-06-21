@@ -3,6 +3,8 @@ Run on AWS
 
 If you want to run the client in the cloud, we have a AMI.
 
+**AMI: ami-bd2c73ab**
+
 1. Launch AMI with defaults (I like to a bit more storage, but it's not necessary)
 
 1. Login with user ``fedora`` and certificate used to launch.

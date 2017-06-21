@@ -18,9 +18,11 @@ Steps:
     mkdir ~/.kube
     ```
 
-1. Download the config
-    ```
+1. Download the config to ``~/.kube`` dir
     
+    ```
+    rm config
+    wget https://s3.amazonaws.com/mongodb-2017/config
     ```
 
 1. Check that you can access the cluster by listing nodes.
