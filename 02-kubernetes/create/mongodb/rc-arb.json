@@ -26,12 +26,6 @@
                 "mongod",
                 "--smallfiles",
                 "--replSet=demoRS"
-              ],
-              "ports": [
-                {
-                  "hostPort": 27018,
-                  "containerPort": 27017
-                }
               ]
             }
           ],
