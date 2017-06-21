@@ -11,9 +11,10 @@ In order to "dockerize" our application we need a machine with a few  prerequisi
 We will execute these steps in a virtual machine running on <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a> and we'll use <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> to manage our images and VMs.  <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a> and <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> will need to be installed on your machine.
 
 
+1. [Launch from USB](01e-setup-image-usb.md)
+1. [Run on AWS](01c-setup-aws-image.md)
 1. [Setup from prebuilt image](01b-setup-prebuilt-image.md)
 1. [Build Docker machine from scratch](01a-setup-build-from-scratch.md)
-1. [Run on AWS](01c-setup-aws-image.md)
 
 
 Next step: [Run application](02-run-app.md)

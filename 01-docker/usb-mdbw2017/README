@@ -2,9 +2,10 @@ Thank you for taking my tutorial.
 
 This USB contains the following files:
 
-build-mongodb-2017.box  - Vagrant box file for import to Virtual Box
-README			        - this file
-
+build-mongodb-2017.box          - Vagrant box file for import to Virtual Box
+README			                - this file
+Vagrantfile                     - file to launch VM
+docker-kubernetes-mdbw17.pdf    - presentation
 
 Import Vagrant box:
 ----------------------
@@ -12,6 +13,9 @@ Import Vagrant box:
 2. Import box file into VirtualBox with the following command
 
 	vagrant box add ./build-mongodb-2017.box --name polyakov/docker-k8s-build --force
+
+3. Copy Vagrantfile to local dir
+4. Launch VM with vagrant up for that dir
 
 Run on AWS
 ----------
